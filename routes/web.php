@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\orderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,31 +13,6 @@ use App\Http\Controllers\orderController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('sidebare');
-// });
-
-//sidebare
-Route::get('/', [orderController::class, 'index']);
-//order
-Route::get('/order', function () {
-    return view('orders');
+Route::get('/', function () {
+    return view('login');
 });
-//navbar
-Route::get('/nav', function () {
-    return view('navbar');
-});
-//home
-Route::get('/home', function () {
-    return view('home');
-});
-//ekstra pembina
-Route::get('/pembina', function () {
-    return view('data_pembina');
-});
-//ekstra prestasi
-Route::get('/prestasi', function () {
-    return view('data_prestasi');
-});
-
-
