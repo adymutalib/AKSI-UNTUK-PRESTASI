@@ -46,7 +46,7 @@
                                   <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="ekstraInput" id="ekstraInput" >
                                     <option>Pilih Ekstrakurikuler</option>
                                     @foreach ($ekstra as $user)
-                                    <option value="{{$user->id_ekstra}}">{{$user->nama_ekstra}}</option>
+                                    <option value="{{$user->id_ekstra}}" {{ $user->id_ekstra == $prestasi->id_ekstra ? 'selected' : ''}}>{{$user->nama_ekstra}}</option>
                                     @endforeach
                                   </select>
                                 </div>

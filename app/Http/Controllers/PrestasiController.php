@@ -65,7 +65,7 @@ class PrestasiController extends Controller
         $decrypted_id = decrypt($id);
         $data['prestasi'] = DB::table('prestasi')->where('id_prestasi', $decrypted_id)->first();
         $data['ekstra'] = Ekstra::select('id_ekstra', 'nama_ekstra')->get();
-        return view('editprestasi', $data);
+        return view('editPrestasi', $data);
 
     }
     public function update(Request $request, $id)
